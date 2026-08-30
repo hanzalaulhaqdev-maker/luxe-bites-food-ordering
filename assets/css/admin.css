@@ -1,0 +1,390 @@
+/**
+ * ADMIN PANEL STYLES
+ * Premium dark admin theme with gold accents
+ */
+
+ .admin-body {
+    background: #0b0b0b;
+    color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.admin-sidebar {
+    background: #141414;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    min-height: 100vh;
+    width: 260px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    padding: 1.5rem 0;
+    transition: transform 0.3s ease;
+}
+
+.admin-brand {
+    font-family: Georgia, serif;
+    font-size: 1.25rem;
+    color: #d4af37;
+    padding: 0 1.5rem 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 1rem;
+    display: block;
+    text-decoration: none;
+}
+
+.admin-brand:hover {
+    color: #e8c84b;
+}
+
+.admin-nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1.5rem;
+    color: #cccccc;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.admin-nav-link:hover,
+.admin-nav-link.active {
+    color: #d4af37;
+    background: rgba(212, 175, 55, 0.05);
+    border-left-color: #d4af37;
+}
+
+.admin-nav-link i {
+    width: 20px;
+    text-align: center;
+}
+
+.admin-main {
+    margin-left: 260px;
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.admin-title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+/* Stats */
+.stat-card {
+    background: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    border-color: rgba(212, 175, 55, 0.3);
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #d4af37;
+    margin-bottom: 0.25rem;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: #888888;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Tables */
+.admin-table-container {
+    background: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 0;
+}
+
+.admin-table th {
+    background: #141414;
+    color: #888888;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.admin-table td {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.9rem;
+    color: #cccccc;
+    vertical-align: middle;
+}
+
+.admin-table tr:last-child td {
+    border-bottom: none;
+}
+
+.admin-table tr:hover td {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+/* Forms — kept for backwards compatibility with .admin-form class */
+.admin-form .form-check-input:checked {
+    background-color: #d4af37;
+    border-color: #d4af37;
+}
+
+/* Global admin text safety — prevent Bootstrap from forcing black */
+.admin-body {
+    /* Override Bootstrap 5's root color variable — this is the source of black text */
+    --bs-body-color: #cccccc;
+    --bs-body-bg: #0b0b0b;
+    --bs-secondary-color: #888888;
+    --bs-emphasis-color: #ffffff;
+    --bs-border-color: rgba(255, 255, 255, 0.1);
+    --bs-modal-bg: #1a1a1a;
+    --bs-modal-color: #ffffff;
+    --bs-modal-border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* All form controls anywhere in admin — not just inside .admin-form */
+.admin-body .form-control,
+.admin-body .form-select,
+.admin-body select,
+.admin-body textarea,
+.admin-body input[type="text"],
+.admin-body input[type="email"],
+.admin-body input[type="password"],
+.admin-body input[type="number"],
+.admin-body input[type="date"],
+.admin-body input[type="tel"],
+.admin-body input[type="file"],
+.admin-body input[type="url"] {
+    background-color: #0b0b0b !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+.admin-body .form-control:focus,
+.admin-body .form-select:focus,
+.admin-body select:focus,
+.admin-body textarea:focus,
+.admin-body input:focus {
+    background-color: #0b0b0b !important;
+    border-color: #d4af37 !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1) !important;
+}
+
+/* Fix autofill */
+.admin-body input:-webkit-autofill,
+.admin-body input:-webkit-autofill:hover,
+.admin-body input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 1000px #0b0b0b inset !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Labels */
+.admin-body .form-label,
+.admin-body .form-check-label,
+.admin-body label {
+    color: #888888;
+}
+
+/* Options */
+.admin-body select option,
+.admin-body option {
+    background-color: #141414;
+    color: #ffffff;
+}
+
+/* Placeholders */
+.admin-body ::placeholder {
+    color: #555555 !important;
+    -webkit-text-fill-color: #555555 !important;
+}
+
+/* Checkboxes */
+.admin-body .form-check-input:checked {
+    background-color: #d4af37;
+    border-color: #d4af37;
+}
+.admin-body .form-check-input {
+    background-color: #0b0b0b;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Modals — Bootstrap 5 sets its own bg/color */
+.admin-body .modal-content {
+    background-color: #1a1a1a !important;
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+.admin-body .modal-header,
+.admin-body .modal-footer {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+.admin-body .modal-title { color: #ffffff !important; }
+
+/* Alerts */
+.admin-body .alert { color: inherit; }
+
+/* Bootstrap utility overrides */
+.admin-body .text-muted      { color: #888888 !important; }
+.admin-body .text-dark        { color: #ffffff !important; }
+.admin-body .text-body        { color: #cccccc !important; }
+.admin-body .text-secondary   { color: #aaaaaa !important; }
+.admin-body .bg-white         { background-color: #1a1a1a !important; }
+.admin-body .bg-light         { background-color: #141414 !important; }
+.admin-body .border           { border-color: rgba(255,255,255,0.1) !important; }
+.admin-body .input-group-text {
+    background-color: #141414 !important;
+    border-color: rgba(255,255,255,0.1) !important;
+    color: #cccccc !important;
+}
+
+/* btn-outline-secondary used on edit/view buttons */
+.admin-body .btn-outline-secondary {
+    color: #aaaaaa !important;
+    border-color: rgba(255,255,255,0.2) !important;
+}
+.admin-body .btn-outline-secondary:hover {
+    background-color: rgba(255,255,255,0.05) !important;
+    color: #ffffff !important;
+}
+
+/* Table inside admin-card (dashboard recent orders) */
+.admin-body .table { color: #cccccc; }
+.admin-body .table > :not(caption) > * > * { color: #cccccc; background-color: transparent; }
+
+/* Buttons */
+.btn-admin {
+    background: #d4af37;
+    color: #0b0b0b;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-admin:hover {
+    background: #e8c84b;
+}
+
+.btn-admin-outline {
+    background: transparent;
+    color: #d4af37;
+    border: 1px solid #d4af37;
+    padding: 0.6rem 1.5rem;
+    font-size: 0.85rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-admin-outline:hover {
+    background: rgba(212, 175, 55, 0.1);
+}
+
+.btn-admin-danger {
+    background: transparent;
+    color: #f44336;
+    border: 1px solid #f44336;
+    padding: 0.4rem 1rem;
+    font-size: 0.8rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.btn-admin-danger:hover {
+    background: rgba(244, 67, 54, 0.1);
+}
+
+/* Status badges */
+.badge-admin {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.75rem;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.badge-admin-pending { background: rgba(255, 193, 7, 0.15); color: #ffc107; }
+.badge-admin-confirmed { background: rgba(33, 150, 243, 0.15); color: #2196f3; }
+.badge-admin-preparing { background: rgba(156, 39, 176, 0.15); color: #9c27b0; }
+.badge-admin-delivery { background: rgba(255, 152, 0, 0.15); color: #ff9800; }
+.badge-admin-delivered { background: rgba(76, 175, 80, 0.15); color: #4caf50; }
+.badge-admin-cancelled { background: rgba(244, 67, 54, 0.15); color: #f44336; }
+
+/* Cards */
+.admin-card {
+    background: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+/* Image preview */
+.img-preview {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Modal */
+.admin-modal .modal-content {
+    background: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+.admin-modal .modal-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.admin-modal .modal-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .admin-sidebar {
+        transform: translateX(-100%);
+    }
+    
+    .admin-sidebar.open {
+        transform: translateX(0);
+    }
+    
+    .admin-main {
+        margin-left: 0;
+    }
+}
